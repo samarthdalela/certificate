@@ -1,0 +1,30 @@
+<%- include('views/header.ejs') %>
+<form class="container" method="post" action="/submit">
+    <fieldset >
+      <legend>Personal and Course Information</legend>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" class="form-control" placeholder="Your Legal Name" name="name">
+      </div>
+      <div class="mb-3">
+        <label for="course" class="form-label">Course Enrolled</label>
+        <select id="course" class="form-select" name="course">
+          <option value="Web Development (Frontend) ">Web Development (Frontend)</option>
+          <option value = "HTML">HTML</option>
+          <option value="CSS">CSS</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" >
+          <label class="form-check-label" for="disabledFieldsetCheck">
+            This information is correct
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </fieldset>
+  </form>
+
+
+<%- include('views/footer.ejs') %>
